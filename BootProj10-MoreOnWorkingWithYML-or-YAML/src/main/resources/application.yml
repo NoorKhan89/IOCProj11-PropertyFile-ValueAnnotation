@@ -1,0 +1,49 @@
+# Employees info
+emp:
+ details:
+   eno:101
+   ename:raja
+   eaddrs:hyd
+  #For arrays 
+favColors:
+   -red
+   -blue
+   -green
+  # for list Collection
+nickNames:
+   -bunny
+   -chunmy
+   -tommy
+ # For map Collection
+phoneNumbers:
+     -99999999
+     -88888888
+     -77777777
+     -66666666
+idDetails:
+   aadhar:543210
+   voterid:567890
+   panNo:1029394858   
+project:
+   pid:3456
+   pname:openFX
+   paddrs:mombai
+   size:7890
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
