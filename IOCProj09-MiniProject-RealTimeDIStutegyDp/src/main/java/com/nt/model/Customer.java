@@ -1,6 +1,4 @@
-
 package com.nt.model;
-
 public class Customer
 {
 private String cno;
@@ -11,8 +9,6 @@ private Double discount;
 private Double finalAmount;
 
 //setter and getter  code {alt+shift+S,R}
-
-
 public String getCno() {
 	return cno;
 }
@@ -49,6 +45,4 @@ public Double getFinalAmount() {
 public void setFinalAmount(Double finalAmount) {
 	this.finalAmount = finalAmount;
 }
-
-
 }

@@ -28,7 +28,8 @@ public abstract class ICustomerMgmtServiceImpl implements ICustomerMgmtService
 		
 		//Use DAO
 		int count=custDAO.Insert(customer);
-		return count==0?"Customer Registraction failed":"Customer Register having Bill Amount ::"+customer.getBillAmount()+"Discount Amount ::"+discountAmount()+"Final Amount ::"+finalAmount(); 
+		return count==0?"Customer Registraction failed":"Customer Register having Bill Amount ::"+customer.getBillAmount()+"Discount Amount ::"
+		+discountAmount()+"Final Amount ::"+finalAmount(); 
 	}
 
 

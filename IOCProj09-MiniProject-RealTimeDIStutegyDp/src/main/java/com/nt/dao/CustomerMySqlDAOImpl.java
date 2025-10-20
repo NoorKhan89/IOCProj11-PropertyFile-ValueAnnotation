@@ -16,18 +16,14 @@ import com.nt.model.Customer;
 public class CustomerMySqlDAOImpl implements ICustomerDOA {
 private static final String CUSTOMER_INFO_INSERT_QUERY="INSERT INTO SPRING_CUSTOMER_INFO(CNAME,CADDRS,BILLAMOUNT,DISCOUNT,FINALAMOUNT)VALUES{?,?,?,?,?}";
 	@Autowired
-	private DataSource ds;
-	
-	
+	private DataSource ds;	
 	@Override
 	public int Insert(Customer cust) throws Exception
 	{
 		int count=0;
 		
 		 try(Connection con=ds.getConnection();
-		 
-			 PreparedStatement ps = con.prepareStatement(CUSTOMER_INFO_INSERT_QUERY);
-			 
+			 PreparedStatement ps = con.prepareStatement(CUSTOMER_INFO_INSERT_QUERY); 
 		 ){
 			 
 		 //Set values to query  param
@@ -36,12 +32,8 @@ private static final String CUSTOMER_INFO_INSERT_QUERY="INSERT INTO SPRING_CUSTO
 			 ps.setDouble(3,cust.getBillAmount());
 			 ps.setDouble(4,cust.getDiscount());
 			 ps.setDouble(5,cust.getFinalAmount());
-			 
 			 //Execute the SQL QUERY
-			 
-			 count=ps.executeUpdate();
-			 
-			 
+			 count=ps.executeUpdate();			 
 			 
 		 }//try End
 		 catch (SQLException se) {

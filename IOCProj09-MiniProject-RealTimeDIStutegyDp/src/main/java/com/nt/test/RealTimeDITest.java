@@ -36,27 +36,16 @@ public class RealTimeDITest
 		cust.setBillAmount(billAmt);
 		cust.setDiscount(billAmt);
 		cust.setFinalAmount(billAmt);
-		
-		
-		
 		//Create IOC Cantainer
 		ClassPathXmlApplicationContext ctx= new ClassPathXmlApplicationContext("com/nt/cfgs/application.xml");
-		
 		//get Controller class Obbject from the IOC Container
-		
-		/*
-		 * CustomerOperationConstroller controller
-		 * =ctx.getBean("customer",CustomerOperationConstroller.class);
-		 */
 		// invoke the b.methode
 		CustomerOperationConstroller controller=ctx.getBean("customerOprationController",CustomerOperationConstroller.class);
-		
 		System.out.println("..................................");
 		Date dt1 =ctx.getBean("java.util.Date",Date.class);
 		System.out.println(dt1);
 		Date dt2 =ctx.getBean("java.util.Date#0",Date.class);
 		System.out.println(dt2);
-		
 		try 
 		{
 		String resultMsg=controller.processCustomer(cust);
@@ -74,10 +63,8 @@ public class RealTimeDITest
 		{
 			System.out.println("Non DB Problem");
 		}
-		
 		//closed the IOC Container
 		ctx.close();
-		
 	}  //main
 
 }   //class
